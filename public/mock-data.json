@@ -1,0 +1,66 @@
+{
+  "title": "Functional Programming Library Documentation",
+  "data": [
+    {
+      "name": "pipe",
+      "details": {
+        "syntax": "A.pipe(data, ...functions)",
+        "example": "A.pipe(\n  [0, 1, 2],\n  A.map((x) => x + 1),\n  A.map((x) => x * 2)\n) // [2, 4, 6]",
+        "description": "Perform left-to-right function composition.",
+        "arguments": [
+          {
+            "arg_name": "data",
+            "description": "The initial value."
+          },
+          {
+            "arg_name": "...functions",
+            "description": "Composite function."
+          }
+        ],
+        "genre": "function"
+      }
+    },
+    {
+      "name": "map",
+      "details": {
+        "syntax": "A.map((value, index) => ...// callback)",
+        "example": "A.pipe(\n  [0, 1, 2],\n  A.map((x) => x + 1),\n  A.map((x) => x * 2)\n) // [2, 4, 6]",
+        "description": "Callback function and apply it to each element of the array.",
+        "arguments": [
+          {
+            "arg_name": "value",
+            "description": "Each array element."
+          },
+          {
+            "arg_name": "index",
+            "description": "Index of each array element."
+          }
+        ],
+        "genre": "array"
+      }
+    },
+    {
+      "name": "reduce",
+      "details": {
+        "syntax": "A.reduce((previousValue, currentValue, index) => ...// callback, initialValue)",
+        "example": "A.pipe(\n  [1, 2, 3, 4, 5],\n  A.reduce((pv, cv) => pv + cv, 0)\n) // 15",
+        "description": "The specified callback function is applied to each element of the array. The return value of the callback function is an accumulated value, which is used as the argument for the next callback function.",
+        "arguments": [
+          {
+            "arg_name": "previousValue",
+            "description": "Cumulative value used in callback functions."
+          },
+          {
+            "arg_name": "currentValue",
+            "description": "Each array element."
+          },
+          {
+            "arg_name": "initialValue",
+            "description": "Initial cumulative value to be used in callback functions."
+          }
+        ],
+        "genre": "array"
+      }
+    }
+  ]
+}
